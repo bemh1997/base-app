@@ -1,10 +1,19 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app.component';
+
+@Component({
+  standalone: true,
+  template: '',
+})
+class TestPageComponent {}
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [provideRouter([{ path: '**', component: TestPageComponent }])],
     }).compileComponents();
   });
 
@@ -14,16 +23,21 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the '02-base' title`, () => {
+  it('should have the course author as its title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('02-base');
+    expect(app.title).toEqual('Humberto Bernal');
   });
 
-  it('should render title', () => {
+  it('should render the navbar links', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, 02-base');
+    const links = Array.from(compiled.querySelectorAll('nav a')).map((link) =>
+      link.textContent?.trim(),
+    );
+
+    expect(links).toContain('Contador');
+    expect(links).toContain('DragonBall Super');
   });
 });

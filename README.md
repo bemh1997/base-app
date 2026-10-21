@@ -1,22 +1,30 @@
-# 02-base-seccion4 — Sección 4: Angular Essentials
+# 02-base-seccion5 — Sección 5: Angular Essentials
 
-Módulo práctico del **Curso de Angular**: proyecto generado con Angular CLI (v19.2.27) para trabajar los fundamentos de Angular standalone — componentes, signals, computed, routing básico y pipes.
+Continuación del curso en la **Sección 5**: se agregan navegación, comunicación entre componentes y gestión de personajes de DragonBall.
 
-## 📌 Temas y ejercicios
+## 📌 Contenido de este módulo
 
-- **Componentes standalone** y estructura de una aplicación Angular.
-- **Propiedades de componentes** y estado local usando una propiedad tradicional y `signal()`.
-- **Signals**: crear y actualizar estado con `signal()`, `.set()` y `.update()`.
-- **Estado derivado** con `computed()` para producir descripciones del héroe.
-- **Change detection** con `ChangeDetectionStrategy.OnPush`.
-- **Eventos de plantilla** para incrementar, decrementar, reiniciar y modificar valores.
-- **Angular Router**: `provideRouter`, rutas `/` y `/hero`, y `RouterOutlet`.
-- **Pipes**: transformación de texto con `UpperCasePipe`.
-- **Bootstrap 5.3** agregado por CDN para el diseño.
+- **Barra de navegación** — `RouterLink`, `RouterLinkActive` y activación exacta del enlace raíz.
+- **Routing** — páginas de contador, héroe, DragonBall y DragonBall Super; ruta comodín que redirige al inicio.
+- **Control flow** — `@for` con `track` y `$index`, y `@if` para mostrar contenido según el estado.
+- **Comunicación entre componentes** — inputs requeridos y outputs tipados para agregar personajes.
+- **Componentes reutilizables** — formulario de alta y lista de personajes.
+- **Estado con Signals** — señales para los campos del formulario y la colección de personajes.
+- **Servicio e inyección de dependencias** — `DragonballService` comparte y actualiza el estado.
+- **Persistencia** — efectos de Angular sincronizan los personajes con LocalStorage.
+- **Renderizado condicional** — class binding según el poder y estado vacío para la lista.
+- **Hash routing** — `HashLocationStrategy` habilita rutas con fragmento.
+- **Estilos** — Bootstrap 5.3 por CDN y clases utilitarias para el diseño.
 
-## 🧠 Resumen práctico
+## 🧠 Conceptos cubiertos
 
-El módulo contiene dos páginas: un contador para practicar estado y eventos, y una página de héroe para trabajar signals, valores derivados y pipes.
+- Separación de componentes y responsabilidades.
+- Signals (`signal`, `input`, `output`, `effect`) y estado compartido mediante un servicio.
+- Persistencia del estado en LocalStorage.
+- Navegación de Angular y estrategia de hash.
+- Plantillas con control flow moderno y class binding.
+
+> `LinkedSignal` y los despliegues también forman parte de los temas estudiados en la sección; este módulo describe los ejemplos implementados en el proyecto.
 
 ---
 
